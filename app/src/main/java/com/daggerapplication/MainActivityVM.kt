@@ -1,6 +1,9 @@
 package com.daggerapplication
 
-import androidx.lifecycle.ViewModel
+import com.daggerapplication.base.BaseViewModel
 
-class MainActivityVM : ViewModel() {
+class MainActivityVM : BaseViewModel() {
+
+
+
 }
