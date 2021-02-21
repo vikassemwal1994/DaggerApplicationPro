@@ -14,5 +14,4 @@ abstract class ActivityBindingModule {
     internal abstract fun contributeMainActivity(): MainActivity
 
 
-
 }

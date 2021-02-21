@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.widget.Toolbar
 import com.daggerapplication.base.BaseActivity
 import com.daggerapplication.databinding.ActivityMainBinding
+import io.reactivex.disposables.CompositeDisposable
 
 class MainActivity : BaseActivity<MainActivityVM, ActivityMainBinding>() {
     private lateinit var mViewModel: MainActivityVM
@@ -22,6 +23,11 @@ class MainActivity : BaseActivity<MainActivityVM, ActivityMainBinding>() {
     override fun performBinding(viewModel: MainActivityVM) {
         mViewModel = viewModel
         mainBinding = getViewDataBinding()
+    }
+
+    override fun setValues() {
+
+
     }
 
     override fun getToolbar(): Toolbar? {
