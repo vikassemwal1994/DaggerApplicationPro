@@ -1,10 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/welcome_bg_color"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".cryptowallet.activity.splash">
+
+        <com.daggerapplication.textviews.RegularTextView
+            android:id="@+id/login"
+            android:text="Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.daggerapplication.textviews.RegularTextView
+            android:id="@+id/add_details"
+            android:text="Add your details to login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login" />
+
+        <EditText
+            android:id="@+id/email"
+            android:hint="Your email address"
+            android:background="@drawable/editext_bg"
+            android:textColorHint="@color/hint_text_color"
+            android:layout_width="0dp"
+            android:textSize="@dimen/_14ssp"
+            android:layout_margin="@dimen/_24sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:maxLength="30"
+            android:inputType="textEmailAddress"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_details"
+            android:paddingLeft="@dimen/_16sdp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:hint="Password"
+            android:background="@drawable/editext_bg"
+            android:textColorHint="@color/hint_text_color"
+            android:layout_width="0dp"
+            android:layout_margin="@dimen/_24sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:maxLength="16"
+            android:inputType="textPassword"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            android:paddingLeft="@dimen/_16sdp" />
+
+        <ImageView
+            android:id="@+id/password_icon"
+            android:src="@drawable/invisible"
+            android:textColorHint="@color/hint_text_color"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_margin="@dimen/_24sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:inputType="textPassword"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            android:paddingRight="@dimen/_16sdp" />
+
+        <com.daggerapplication.textviews.RegularTextView
+            android:id="@+id/forgot_password"
+            android:text="Forgot your password?"
+            android:textColor="@color/create_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14ssp"
+            android:layout_margin="@dimen/_24sdp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password" />
+
+        <com.daggerapplication.textviews.RegularTextView
+            android:id="@+id/login_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_24sdp"
+            android:background="@drawable/bg_button_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forgot_password"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+
+        <com.daggerapplication.textviews.RegularTextView
+            android:id="@+id/sign_up"
+            style="?android:attr/borderlessButtonStyle"
+            android:text="Sign Up"
+            android:background="@drawable/create_acc_btn_view"
+            android:textColor="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_24sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@+id/login_button"
+            android:textSize="14sp" />
+
+        <!--<LinearLayout
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.daggerapplication.textviews.RegularTextView
+                android:id="@+id/dont_have_acnt"
+                android:text="Don't have an Acoount ?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_14ssp" />
+
+            <com.daggerapplication.textviews.RegularTextView
+                android:id="@+id/sign_up"
+                android:text="Sign Up"
+                android:textColor="@color/button_color"
+                android:layout_width="wrap_content"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_14ssp" />
+
+        </LinearLayout>-->
+
+        <ProgressBar
+            android:id="@+id/progress_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="Screen is under development"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

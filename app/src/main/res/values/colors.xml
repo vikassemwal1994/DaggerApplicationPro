@@ -7,4 +7,36 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="button_color">#FF6600</color>
+    <color name="welcome_bg_color">#F5F5F5</color>
+    <color name="dark_grey">#707070</color>
+    <color name="light_border_grey">#D3D3D3</color>
+    <color name="light_grey">#EDEDED</color>
+    <color name="create_text_color">#303030</color>
+    <color name="hint_text_color">#939393</color>
+    <color name="edit_text_bg_color">#E6E6E6</color>
+
+    <color name="sand_color">#E7BB7D</color>
+    <color name="home_bg_color">#FFCB05</color>
+    <color name="bottom_menu_color">#838383</color>
+    <color name="bottom_selected_color">#023E53</color>
+    <color name="view_all_color">#006C92</color>
+    <color name="plus_button_black">#303030</color>
+    <color name="no_button_green">#37903C</color>
+    <color name="error_red">#ff0000</color>
+
+    <color name="success_border">#50C70543</color>
+    <color name="success_background">#9EDB77</color>
+    <color name="success_text_color">#4A800B</color>
+    <color name="fail_border">#D63F2019</color>
+    <color name="fail_background">#E5B2A7</color>
+    <color name="fail_text_color">#D63F20</color>
+    <color name="crypto_wallet_coin_background_color">#EFDFC4</color>
+    <color name="crypto_wallet_coin_text_color">#845A12</color>
+
+    <color name="bitcoin_bg_color">#f38c15</color>
+    <color name="ethereum_bg_color">#345080</color>
+    <color name="litecoin_bg_color">#0a72a9</color>
+    <color name="transparent">#B0000000</color>
 </resources>
